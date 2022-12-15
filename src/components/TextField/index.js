@@ -12,7 +12,7 @@ const TextField = (props) => {
   return (
     <div className="text-field">
       <label>{props.label}</label>
-      <input placeholder={changedPlaceholder} />
+      <input required={props.required} placeholder={changedPlaceholder} />
     </div>
   );
 };
