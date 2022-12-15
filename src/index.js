@@ -11,6 +11,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  /* O "React.StrictMode" será utilizado apenas em ambiente de desenvolvimento. Nesse ambiente, ele poderá realizar algumas renderizações a mais no componente, justamente para realizar mais verificações. No ambiente de produção, esse modo não estará ativo. */
   <React.StrictMode>
     <App />
   </React.StrictMode>
