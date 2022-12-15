@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+/* O "createRoot()" recebe o componente principal da aplicação. Após isso, o componente "App" foi renderizado. O componente "App" é o "App.js". */
+
+/* O "index.js" é o ponto de entrada da aplicação. É dentro desse arquivo que a aplicação começará. */
+
+/* O "React.StrictMode", em produção, não terá nenhuma utilidade. Em ambiente de desenvolvimento, ele tentará gerar mensagens de erro mais amigáveis para o desenvolvedor. Essas mensagens de erro mais amigáveis serão inseridas no console do navegador. */
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
