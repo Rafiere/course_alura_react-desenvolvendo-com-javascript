@@ -4,11 +4,15 @@
 
 import "./style.css";
 
-const TextField = () => {
+/* Por padrão, o React entrega o parâmetro "props". Esse parâmetro contém as propriedades que o componente "TextField" recebeu. */
+
+const TextField = (props) => {
+  const changedPlaceholder = `${props.placeholder}...`;
+
   return (
     <div className="text-field">
-      <label>Nome</label>
-      <input placeholder="Digite o seu nome" />
+      <label>{props.label}</label>
+      <input placeholder={changedPlaceholder} />
     </div>
   );
 };
