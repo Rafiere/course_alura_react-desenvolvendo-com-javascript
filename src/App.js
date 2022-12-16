@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
+import Team from "./components/Team";
 
 function App() {
   const [collaborators, setCollaborators] = useState([]);
@@ -21,6 +22,7 @@ function App() {
           onRegisterCollaborator(collaborator)
         }
       />
+      <Team nome="Programação"></Team>
     </div>
   );
 }
