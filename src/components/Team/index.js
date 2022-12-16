@@ -5,10 +5,28 @@ import "./style.css";
 
 const Team = (props) => {
   return (
-    <section className="time" style={{ backgroundColor: props.secondaryColor }}>
-      <h3 style={{ borderColor: props.primaryColor }}>{props.nome}</h3>
-      <Card />
-    </section>
+    /* Se a expressão for "true", o JSX retornará o componente. Se for "false", o JSX não renderizará o componente. */
+
+    props.collaborators.length > 0 && (
+      <section
+        className="time"
+        style={{ backgroundColor: props.secondaryColor }}
+      >
+        <h3 style={{ borderColor: props.primaryColor }}>{props.nome}</h3>
+        <div className="cards">
+          {props.collaborators.map((collaborator) => {
+            return (
+              <Card
+                key={collaborator.nome}
+                nome={collaborator.nome}
+                cargo={collaborator.cargo}
+                imagem={collaborator.imagem}
+              />
+            );
+          })}
+        </div>
+      </section>
+    )
   );
 };
 

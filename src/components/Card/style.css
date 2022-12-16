@@ -20,6 +20,7 @@
   border-radius: 0px 0px 10px 10px;
   padding-top: 60px;
   padding-bottom: 40px;
+  display: inline-block;
 }
 
 .card .footer h4 {
@@ -34,5 +35,5 @@
   font-size: 18px;
   line-height: 22px;
   color: #212121;
-  padding: 0 8px;
+  padding: 0 16px;
 }

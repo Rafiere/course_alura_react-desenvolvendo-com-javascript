@@ -4,14 +4,11 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="header">
-        <img
-          src="http://github.com/rafiere.png"
-          alt="Imagem do membro do time"
-        />
+        <img src={props.imagem} alt={props.nome} />
       </div>
       <div className="footer">
-        <h4>Rafael</h4>
-        <h5>Programador</h5>
+        <h4>{props.nome}</h4>
+        <h5>{props.cargo}</h5>
       </div>
     </div>
   );
