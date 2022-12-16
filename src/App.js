@@ -33,11 +33,11 @@ function App() {
     {
       nome: "Mobile",
       primaryColor: "#FFBA05",
-      secondaryColor: "#FFFSD9",
+      secondaryColor: "#FFF5D9",
     },
     {
       nome: "Inovação e Gestão",
-      primaryColor: "#FFBA29",
+      primaryColor: "#FF8A29",
       secondaryColor: "#FFEEDF",
     },
   ];
@@ -59,6 +59,7 @@ function App() {
         onRegisterCollaborator={(collaborator) =>
           onRegisterCollaborator(collaborator)
         }
+        teams={teams.map((team) => team.nome)}
       />
       {teams.map((team) => {
         /* O "key" serve para controlar quando um filho deve ser renderizado ou não. Se tivermos vários filhos e atualizarmos apenas um, é através da "key" que o React saberá se deve atualizar um filho ou não. */
