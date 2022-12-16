@@ -4,7 +4,11 @@ const Dropdown = (props) => {
   return (
     <div className="dropdown">
       <label>{props.label}</label>
-      <select required={props.required}>
+      <select
+        required={props.required}
+        value={props.valor}
+        onChange={(event) => props.onChangeText(event.target.value)}
+      >
         {/* Precisamos utilizar o "map()" para percorrermos uma lista de itens e devolvermos uma lista de "option" com os nomes de cada grupo já inseridos. */}
 
         {/* A "key" serve para o React controlar a renderização e saber quando ele precisa ou não atualizar um item. Ela precisa ser algo único para cada elemento que está realizando a iteração. */}

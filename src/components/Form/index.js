@@ -1,9 +1,10 @@
+import { useState } from "react";
 import Button from "../Button";
 import Dropdown from "../Dropdown";
 import TextField from "../TextField";
 import "./style.css";
 
-const Form = () => {
+const Form = (props) => {
   const times = [
     "Programação",
     "Front-End",
@@ -14,10 +15,20 @@ const Form = () => {
     "Inovação e Gestão",
   ];
 
+  const [nome, setNome] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+  const [time, setTime] = useState("");
+
   const onSave = (evento) => {
     /* Estamos impedindo que o comportamento padrão seja realizado, ou seja, que, ao submetermos o formulário, que a página seja atualizada. */
     evento.preventDefault();
-    console.log("O formulário foi submetido!");
+    props.onRegisterCollaborator({
+      nome: nome,
+      cargo: cargo,
+      imagem: imagem,
+      time: time,
+    });
   };
 
   return (
@@ -31,18 +42,30 @@ const Form = () => {
           required={true}
           label="Nome"
           placeholder="Digite o seu nome"
+          value={nome}
+          onChangeText={(value) => setNome(value)}
         />
         <TextField
           required={true}
           label="Cargo"
           placeholder="Digite o seu cargo"
+          value={cargo}
+          onChangeText={(valor) => setCargo(valor)}
         />
         <TextField
           required={false}
           label="Imagem"
           placeholder="Digite o endereço da imagem"
+          value={imagem}
+          onChangeText={(valor) => setImagem(valor)}
         />
-        <Dropdown required={true} label="Time" itens={times} />
+        <Dropdown
+          required={true}
+          label="Time"
+          itens={times}
+          value={time}
+          onChangeText={(valor) => setTime(valor)}
+        />
         <Button text="Criar Card">
           {/* Tudo o que estiver dentro do botão serão os "children", que serão passados para o componente "Button". */}
           Criar Card
