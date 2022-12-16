@@ -4,6 +4,44 @@ import Form from "./components/Form";
 import Team from "./components/Team";
 
 function App() {
+  const teams = [
+    {
+      nome: "Programação",
+      primaryColor: "#57C278",
+      secondaryColor: "#D9F7E9",
+    },
+    {
+      nome: "Front-End",
+      primaryColor: "#82CFFA",
+      secondaryColor: "#E8F8FF",
+    },
+    {
+      nome: "Data Science",
+      primaryColor: "#A6D157",
+      secondaryColor: "#F0F8E2",
+    },
+    {
+      nome: "DevOps",
+      primaryColor: "#ED6B69",
+      secondaryColor: "#FDE7E8",
+    },
+    {
+      nome: "UX e Design",
+      primaryColor: "#DB6EBF",
+      secondaryColor: "#FAE9F5",
+    },
+    {
+      nome: "Mobile",
+      primaryColor: "#FFBA05",
+      secondaryColor: "#FFFSD9",
+    },
+    {
+      nome: "Inovação e Gestão",
+      primaryColor: "#FFBA29",
+      secondaryColor: "#FFEEDF",
+    },
+  ];
+
   const [collaborators, setCollaborators] = useState([]);
 
   const onRegisterCollaborator = (collaborator) => {
@@ -22,7 +60,17 @@ function App() {
           onRegisterCollaborator(collaborator)
         }
       />
-      <Team nome="Programação"></Team>
+      {teams.map((team) => {
+        /* O "key" serve para controlar quando um filho deve ser renderizado ou não. Se tivermos vários filhos e atualizarmos apenas um, é através da "key" que o React saberá se deve atualizar um filho ou não. */
+        return (
+          <Team
+            key={team.nome}
+            nome={team.nome}
+            primaryColor={team.primaryColor}
+            secondaryColor={team.secondaryColor}
+          ></Team>
+        );
+      })}
     </div>
   );
 }
