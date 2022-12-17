@@ -16,7 +16,7 @@ const Dropdown = (props) => {
         {/* Não é recomendado colocarmos o index como a propriedade "key". Normalmente, essas informações são enviadas de um back-end, e, dessa forma, teremos um ID que deverá ser utilizado. */}
 
         {/* É com base na chave que o React perceberá se deve ou não renderizar um componente novamente. */}
-
+        <option value=""></option>
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}

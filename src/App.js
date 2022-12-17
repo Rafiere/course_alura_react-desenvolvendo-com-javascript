@@ -46,6 +46,8 @@ function App() {
   const [collaborators, setCollaborators] = useState([]);
 
   const onRegisterCollaborator = (collaborator) => {
+    /* Essa é uma instrução para a V8 do Chrome interromper as ações que estão sendo executadas na tela. */
+    // debugger;
     console.log(collaborator);
     /* Estou espalhando os colaboradores antigos e adicionando o novo colaborador, que acabou de ser criado, ao final do array. */
     setCollaborators([...collaborators, collaborator]);

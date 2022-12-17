@@ -21,6 +21,7 @@ const Team = (props) => {
                 nome={collaborator.nome}
                 cargo={collaborator.cargo}
                 imagem={collaborator.imagem}
+                primaryColor={props.primaryColor}
               />
             );
           })}
