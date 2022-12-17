@@ -17,7 +17,3 @@ Com o React, podemos montar layouts, sites, e deixar a interação com o usuári
 Com o JS Vanilla, até conseguiriamos fazer isso, porém, teríamos que nos preocupar com os momentos para atualizarmos o DOM.
 
 No Facebook, por exemplo, temos uma página com muitas coisas acontecendo ao mesmo tempo, sem precisarmos recarregar a página para visualizarmos as alterações. Esse é propósito de uma SPA (Single Page Application).
-
----
-
-A tag "<Fragment>" some quando ela vira um elemento do DOM. Ela serve apenas como um wrapper. Uma forma abreviada para utilizarmos o "<Fragment>" é através da tag "<>".
